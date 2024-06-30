@@ -4,7 +4,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class ArmazenamentoPessoas {
-    private static Map<String, Pessoa> pessoas = new HashMap<>(); // Mapa para armazenar pessoas, usando o nome como chave
+    private static Map<String, Pessoa> pessoas = new HashMap<>(); // Criação do hashmap para armazenar pessoas, usando o nome como chave
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -30,7 +30,7 @@ public class ArmazenamentoPessoas {
         } while (opcao != 0);
     }
 
-    private static void exibirMenu() {
+    private static void exibirMenu() { // menu principal do programa, com 3 opções
         System.out.println("\n=== Menu ===");
         System.out.println("1. Adicionar pessoa");
         System.out.println("2. Consultar pessoa");
@@ -59,28 +59,28 @@ public class ArmazenamentoPessoas {
         System.out.print("Digite os problemas de saúde crônicos: ");
         String problemasSaude = scanner.next();
 
-        // Criando objeto Pessoa com os dados fornecidos
+        // Criação do objeto pessoa, com os parâmetros fornecidos no cadastramento
         Pessoa pessoa = new Pessoa(nome, telefoneEmergencia, tipoSanguineo, email, alergias, problemasSaude);
 
-        // Adicionando a pessoa ao mapa
+        // Adicionar ao hashmap
         pessoas.put(nome, pessoa);
 
-        System.out.println("Pessoa adicionada com sucesso!");
+        System.out.println("Pessoa adicionada com sucesso!"); // retorna mensagem de sucesso
     }
 
     private static void consultarPessoa(Scanner scanner) {
         System.out.println("\n== Consultar Pessoa ==");
 
-        System.out.print("Digite o nome da pessoa que deseja consultar: ");
+        System.out.print("Digite o nome da pessoa que deseja consultar: "); // pesquisa a pessoa com base no nome
         String nome = scanner.next();
 
-        // Buscando a pessoa pelo nome no mapa
+        // busca pelo parâmetro fornecido no hashmap
         Pessoa pessoa = pessoas.get(nome);
 
         if (pessoa != null) {
-            System.out.println("Informações encontradas:\n" + pessoa);
+            System.out.println("Informações encontradas:\n" + pessoa); // mensagem de sucesso
         } else {
-            System.out.println("Pessoa não encontrada.");
+            System.out.println("Pessoa não encontrada."); // mensagem de erro
         }
     }
 }

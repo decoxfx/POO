@@ -7,7 +7,7 @@ public class Pessoa {
     private String alergias;
     private String problemasSaude;
 
-    // Construtor da classe Pessoa
+    // construtor da classe Pessoa
     public Pessoa(String nome, String telefoneEmergencia, String tipoSanguineo, String email, String alergias, String problemasSaude) {
         this.nome = nome;
         this.telefoneEmergencia = telefoneEmergencia;
@@ -17,7 +17,6 @@ public class Pessoa {
         this.problemasSaude = problemasSaude;
     }
 
-    // Métodos de acesso aos atributos (getters)
     public String getNome() {
         return nome;
     }
@@ -42,16 +41,16 @@ public class Pessoa {
         return problemasSaude;
     }
 
-    // Método toString para representação textual da pessoa
-    @Override
+    // Método toString para trazer as informações
+    @Override 
     public String toString() {
         return "Pessoa{" +
                 "nome='" + nome + '\'' +
-                ", telefoneEmergencia='" + telefoneEmergencia + '\'' +
-                ", tipoSanguineo='" + tipoSanguineo + '\'' +
-                ", email='" + email + '\'' +
+                ", telefone de Emergencia='" + telefoneEmergencia + '\'' +
+                ", tipo sanguineo='" + tipoSanguineo + '\'' +
+                ", e-mail='" + email + '\'' +
                 ", alergias='" + alergias + '\'' +
-                ", problemasSaude='" + problemasSaude + '\'' +
+                ", problemas de saude='" + problemasSaude + '\'' +
                 '}';
     }
 }
